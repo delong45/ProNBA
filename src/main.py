@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import requests
 import nba
 import display
@@ -20,4 +22,5 @@ if __name__ == '__main__':
     shots = response.json()['resultSets'][0]['rowSet']
 
     df = display.Dataframe(shots, headers)
-    df.display()
+    df.print_data()
+    df.shot_distribution()
