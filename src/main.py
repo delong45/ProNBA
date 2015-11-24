@@ -25,3 +25,4 @@ if __name__ == '__main__':
     df.print_data()
     df.shot_distribution()
     df.basketball_court()
+    df.score()

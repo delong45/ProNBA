@@ -31,6 +31,15 @@ class Dataframe(object):
         plt.show()
         fig.savefig('shot_distribution.png', dpi=fig.dpi)
 
+    def score(self):
+        fig = plt.figure(figsize=(12,11))
+        plt.scatter(self.shot_df.LOC_X, self.shot_df.LOC_Y)
+        self.draw_court()
+        plt.xlim(-250, 250)
+        plt.ylim(422.5, -47.5)
+        plt.show()
+        fig.savefig('score.png', dpi=fig.dpi)
+
     def draw_court(self, ax=None, color='black', lw=2, outer_lines=False):
         if ax is None:
             ax = plt.gca()
